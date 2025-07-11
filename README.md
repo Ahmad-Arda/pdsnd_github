@@ -8,7 +8,12 @@ My Awesome Bike Share Project
 
 
 ### Description
-*A brief overview of the project: what it does, why it matters, and how it works.*
+Bike Share Analyzer provides insights into bike sharing trends 
+based on trip data collected from city-wide bike systems. 
+Users can explore usage patterns, trip duration statistics, 
+popular days or hours, and station activity. The project helps 
+stakeholders understand ridership behavior and supports data‑
+driven planning decisions.
 
 ### Files Used
 - `bikeshare.py`
