@@ -4,7 +4,8 @@
 [YYYY-MM-DD] *(e.g. 2025-07-11)*
 
 ### Project Title
-*Replace this with the name of your project*
+My Awesome Bike Share Project
+
 
 ### Description
 *A brief overview of the project: what it does, why it matters, and how it works.*
