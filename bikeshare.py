@@ -12,21 +12,32 @@ CITY_DATA = {
 }
 
 def get_filters():
-    """Ask user for city, month, and day; validate inputs."""
+    """Prompt for city, month, and day with robust validation."""
     print("Hello! Let's explore some US bikeshare data!")
-    city = input("Choose a city (Chicago, New York City, Washington): ").strip().lower()
-    while city not in CITY_DATA:
-        city = input("Invalid. Please enter: Chicago, New York City, or Washington: ").strip().lower()
 
-    month = input("Enter month (all, January–June): ").strip().lower()
+    # Validate city
+    while True:
+        city = input("Choose a city (Chicago, New York City, Washington): ").strip().lower()
+        if city in CITY_DATA:
+            break
+        print("Invalid city. Please enter Chicago, New York City, or Washington.")
+
+    # Validate month
     months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
-    while month not in months:
-        month = input("Invalid. Enter month (all, January–June): ").strip().lower()
+    while True:
+        month = input("Enter month (all or January–June): ").strip().lower()
+        if month in months:
+            break
+        print("Invalid month. Please select from: all, January–June.")
 
-    day = input("Enter day of week (all, Monday–Sunday): ").strip().lower()
-    days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-    while day not in days:
-        day = input("Invalid. Enter full day name or 'all': ").strip().lower()
+    # Validate day
+    days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday',
+            'friday', 'saturday', 'sunday']
+    while True:
+        day = input("Enter day of week (all or Monday–Sunday): ").strip().lower()
+        if day in days:
+            break
+        print("Invalid day. Please enter a full weekday name or 'all'.")
 
     print("-" * 40)
     return city, month, day
